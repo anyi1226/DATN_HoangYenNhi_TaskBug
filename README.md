@@ -1,66 +1,215 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">🛠️ Task Bug Management System</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <strong>Hệ thống Quản lý Task và Theo dõi Lỗi Phần mềm</strong><br/>
+  Đồ án Tốt nghiệp — Trường Đại học Thủy Lợi
 </p>
 
-## About Laravel
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-10.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PHP-8.1-777BB4?style=for-the-badge&logo=php&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 👩‍🎓 Thông tin sinh viên
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| | |
+|---|---|
+| **Sinh viên thực hiện** | Hoàng Yên Nhi |
+| **Lớp** | 64HTTT3 |
+| **Trường** | Đại học Thủy Lợi |
+| **Ngành** | Hệ thống Thông tin |
+| **Loại đồ án** | Tốt nghiệp |
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📋 Giới thiệu
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Task Bug Management System** là hệ thống quản lý dự án phần mềm nội bộ, hỗ trợ toàn bộ vòng đời phát triển từ khi khởi tạo task đến khi nghiệm thu. Hệ thống tích hợp quy trình kiểm thử chất lượng, theo dõi lỗi, và đánh giá hiệu suất thành viên thông qua hệ thống KPI tự động.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Vấn đề giải quyết
 
-## Laravel Sponsors
+Trong quá trình phát triển phần mềm nhóm, các nhóm thường gặp khó khăn trong việc:
+- Theo dõi tiến độ công việc của từng thành viên một cách minh bạch
+- Quản lý vòng đời lỗi (bug) từ khi phát hiện đến khi xác nhận đóng
+- Đánh giá khách quan hiệu suất làm việc của lập trình viên và kiểm thử viên
+- Truy xuất nguồn gốc lỗi production về task/người phụ trách cụ thể
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Hệ thống này giải quyết toàn bộ các vấn đề trên trong một nền tảng thống nhất.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## ✨ Tính năng chính
 
-## Contributing
+### 🔐 Xác thực & Phân quyền
+- Đăng nhập bằng **username** (không dùng email)
+- Tự động khóa tài khoản sau **3 lần sai mật khẩu** (30 phút)
+- Bắt buộc đổi mật khẩu lần đầu đăng nhập
+- Phân quyền 4 vai trò: **Admin / PM / Developer / Tester**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 📁 Quản lý Dự án
+- Tạo dự án, phân công thành viên với vai trò rõ ràng
+- Thanh tiến độ dự án theo tỷ lệ task hoàn thành
+- Quản lý thành viên linh hoạt (thêm, xóa, đổi vai trò)
 
-## Code of Conduct
+### ✅ Quản lý Task
+- Phân cấp task cha–con (root task → child task)
+- 6 loại công việc: Task, Subtask, Bug, Research, Fix, Test
+- Luồng trạng thái: `Todo → In Progress → Ready to Test → Review Approved → Done`
+- **Auto-cascade**: con hoàn thành → cha tự động cập nhật trạng thái
+- Lịch sử đầy đủ mọi lần chuyển trạng thái
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 🐛 Theo dõi Bug
+- **Bug QA**: Tester nhấn **Fail** → modal tạo bug, tự gán cho developer gốc, task cha hoàn nguyên
+- **Bug Production**: Ghi nhận lỗi từ môi trường sản xuất, liên kết với story gây ra lỗi
+- Phân biệt rõ Bug QA và Bug Production trong bộ lọc danh sách
 
-## Security Vulnerabilities
+### 📊 KPI Tự động
+| Sự kiện | Điểm trừ | Đối tượng |
+|---------|----------|----------|
+| Task hoàn thành trễ hạn | −2đ/ngày | Developer |
+| Bug con được tạo | −0.25đ/bug | Developer |
+| Giữ task ở RTT > 48 giờ | −0.5đ/ngày | Tester |
+| Bug Production | −5đ | Developer + Tester gốc |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+> Công thức: **Điểm = max(0, 100 + Σ điểm trừ)** theo từng tháng
 
-## License
+### 📈 Báo cáo Chất lượng
+- DRE % (Defect Removal Efficiency)
+- Retest rate theo developer
+- Thời gian sửa lỗi trung bình
+- Completion rate theo thành viên
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 💬 Cộng tác
+- Bình luận rich text trên mọi task/bug
+- Upload ảnh inline vào nội dung comment
+- Đính kèm tệp (ảnh, PDF, Office, zip — tối đa 20 MB)
+- Thông báo nội bộ theo sự kiện (giao task, bug sẵn sàng test, review approved)
+
+---
+
+## 🏗️ Kiến trúc hệ thống
+
+```
+task_bug/
+├── app/
+│   ├── Http/Controllers/    # AuthController, TaskController, ProjectController...
+│   ├── Models/              # User, Project, Task, TaskHistory, KpiTransaction...
+│   └── Services/            # KpiService
+├── database/
+│   └── migrations/          # 15+ migration files
+├── resources/
+│   └── views/               # Blade templates (tasks, projects, admin, quality...)
+├── routes/
+│   └── web.php              # Toàn bộ route map
+├── .docs/                   # Tài liệu đặc tả use case
+└── uc/                      # Sơ đồ PlantUML + PNG
+```
+
+### Công nghệ sử dụng
+
+| Thành phần | Công nghệ |
+|-----------|----------|
+| Backend | Laravel 10, PHP 8.1 |
+| Database | MySQL 8.0 (Eloquent ORM) |
+| Frontend | Blade Templates, CSS thuần (CSS Variables) |
+| Authentication | Session-based, Username login |
+| File Storage | Laravel Storage (local disk) |
+
+---
+
+## 🚀 Hướng dẫn cài đặt
+
+### Yêu cầu môi trường
+- PHP >= 8.1
+- Composer
+- MySQL >= 8.0
+- Node.js (để build assets nếu cần)
+
+### Các bước cài đặt
+
+```bash
+# 1. Clone repository
+git clone https://github.com/<your-username>/task_bug.git
+cd task_bug
+
+# 2. Cài đặt dependencies
+composer install
+
+# 3. Cấu hình môi trường
+cp .env.example .env
+php artisan key:generate
+
+# 4. Cấu hình database trong .env
+# DB_DATABASE=task_bug
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+# 5. Chạy migration và seed dữ liệu mẫu
+php artisan migrate
+php artisan db:seed --class=DemoSeeder
+
+# 6. Khởi động server
+php artisan serve
+```
+
+Truy cập: `http://localhost:8000`
+
+### Tài khoản demo
+
+| Vai trò | Username | Mật khẩu |
+|---------|----------|---------|
+| Admin | `admin` | `Password1@` |
+| PM | `pm01` | `Password1@` |
+| Developer | `dev01` | `Password1@` |
+| Tester | `tester01` | `Password1@` |
+
+---
+
+## 📐 Mô hình dữ liệu
+
+Hệ thống gồm **8 bảng chính**:
+
+```
+users ──────────── project_members ──── projects
+  │                                        │
+  │                                      tasks ◄──┐
+  │                                        │      │ (parent_id)
+  ├── task_histories ◄───────────────────┤       │
+  ├── kpi_transactions ◄────────────────┤       │
+  ├── user_notifications ◄─────────────┤       │
+  └── comments ◄───────────────────────┘       │
+        └── comment_attachments        linked_story_id (prod bug)
+```
+
+Xem chi tiết: [`uc/ER Diagram.png`](uc/ER%20Diagram.png) | [`uc/Class Diagram.png`](uc/Class%20Diagram.png)
+
+---
+
+## 📄 Tài liệu
+
+| Thư mục | Nội dung |
+|--------|---------|
+| [`.docs/`](.docs/) | Đặc tả use case chi tiết (23 UC) |
+| [`uc/`](uc/) | Sơ đồ use case, biểu đồ lớp, mô hình ER (PlantUML + PNG) |
+
+---
+
+## 📷 Ảnh màn hình
+
+> *(Thêm ảnh chụp màn hình của ứng dụng tại đây)*
+
+---
+
+## 📜 Giấy phép
+
+Dự án được phát triển phục vụ mục đích học thuật — Đồ án Tốt nghiệp Đại học Thủy Lợi.
+
+---
+
+<p align="center">
+  Được xây dựng với ❤️ bởi <strong>Hoàng Yên Nhi</strong> — Lớp 64HTTT3, Đại học Thủy Lợi
+</p>
