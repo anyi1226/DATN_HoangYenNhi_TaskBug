@@ -91,24 +91,6 @@ Hệ thống này giải quyết toàn bộ các vấn đề trên trong một n
 
 ---
 
-## 🏗️ Kiến trúc hệ thống
-
-```
-task_bug/
-├── app/
-│   ├── Http/Controllers/    # AuthController, TaskController, ProjectController...
-│   ├── Models/              # User, Project, Task, TaskHistory, KpiTransaction...
-│   └── Services/            # KpiService
-├── database/
-│   └── migrations/          # 15+ migration files
-├── resources/
-│   └── views/               # Blade templates (tasks, projects, admin, quality...)
-├── routes/
-│   └── web.php              # Toàn bộ route map
-├── .docs/                   # Tài liệu đặc tả use case
-└── uc/                      # Sơ đồ PlantUML + PNG
-```
-
 ### Công nghệ sử dụng
 
 | Thành phần | Công nghệ |
@@ -127,7 +109,6 @@ task_bug/
 - PHP >= 8.1
 - Composer
 - MySQL >= 8.0
-- Node.js (để build assets nếu cần)
 
 ### Các bước cài đặt
 
@@ -157,58 +138,6 @@ php artisan serve
 ```
 
 Truy cập: `http://localhost:8000`
-
-### Tài khoản demo
-
-| Vai trò | Username | Mật khẩu |
-|---------|----------|---------|
-| Admin | `admin` | `Password1@` |
-| PM | `pm01` | `Password1@` |
-| Developer | `dev01` | `Password1@` |
-| Tester | `tester01` | `Password1@` |
-
----
-
-## 📐 Mô hình dữ liệu
-
-Hệ thống gồm **8 bảng chính**:
-
-```
-users ──────────── project_members ──── projects
-  │                                        │
-  │                                      tasks ◄──┐
-  │                                        │      │ (parent_id)
-  ├── task_histories ◄───────────────────┤       │
-  ├── kpi_transactions ◄────────────────┤       │
-  ├── user_notifications ◄─────────────┤       │
-  └── comments ◄───────────────────────┘       │
-        └── comment_attachments        linked_story_id (prod bug)
-```
-
-Xem chi tiết: [`uc/ER Diagram.png`](uc/ER%20Diagram.png) | [`uc/Class Diagram.png`](uc/Class%20Diagram.png)
-
----
-
-## 📄 Tài liệu
-
-| Thư mục | Nội dung |
-|--------|---------|
-| [`.docs/`](.docs/) | Đặc tả use case chi tiết (23 UC) |
-| [`uc/`](uc/) | Sơ đồ use case, biểu đồ lớp, mô hình ER (PlantUML + PNG) |
-
----
-
-## 📷 Ảnh màn hình
-
-> *(Thêm ảnh chụp màn hình của ứng dụng tại đây)*
-
----
-
-## 📜 Giấy phép
-
-Dự án được phát triển phục vụ mục đích học thuật — Đồ án Tốt nghiệp Đại học Thủy Lợi.
-
----
 
 <p align="center">
   Được xây dựng với ❤️ bởi <strong>Hoàng Yên Nhi</strong> — Lớp 64HTTT3, Đại học Thủy Lợi
